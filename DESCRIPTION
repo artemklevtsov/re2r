@@ -22,13 +22,20 @@ License: BSD_3_clause + file LICENSE
 LazyData: TRUE
 Depends: R (>= 3.3)
 Imports:
-    Rcpp (>= 0.12.2), stringi, RcppParallel,
-    htmlwidgets (>= 0.6),
-LinkingTo: Rcpp, RcppParallel
+    Rcpp (>= 0.12.2),
+    stringi,
+    RcppParallel
+LinkingTo:
+    Rcpp,
+    RcppParallel
 Suggests:
-    knitr (>= 1.12.3),testthat,
-    rmarkdown (>= 0.9.5),microbenchmark,
-    ggplot2, directlabels
+    htmlwidgets (>= 0.6),
+    knitr (>= 1.12.3),
+    testthat,
+    rmarkdown (>= 0.9.5),
+    microbenchmark,
+    ggplot2,
+    directlabels
 URL: https://github.com/qinwf/re2r/
 BugReports: https://github.com/qinwf/re2r/issues
 VignetteBuilder: knitr

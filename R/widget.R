@@ -34,11 +34,15 @@ remove_named = function(string){
 #' @export
 show_regex <- function(pattern, width = NULL, height = NULL) {
 
-    if (is.character(pattern)){
+    if (!requireNamespace("htmlwidgets", quietly = TRUE)) {
+        stop("'htmlwidgets' package is not installed.")
+    }
+
+    if (is.character(pattern)) {
         res = re2(pattern)
-    }else if (inherits(pattern,"re2c")) {
+    } else if (inherits(pattern,"re2c")) {
         res = pattern
-    } else if (is.list(pattern)){
+    } else if (is.list(pattern)) {
         return(show_regex(pattern[[1]], width, height))
     } else {
         stop("pattern is a string or a pre-compiled regular expression.")

@@ -32,7 +32,6 @@
 
 ##' @useDynLib re2r
 ##' @import Rcpp
-##' @import htmlwidgets
 ##' @importFrom stringi stri_enc_toutf8
 ##' @importFrom RcppParallel RcppParallelLibs
 NULL
